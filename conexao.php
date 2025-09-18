@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$dbname = 'nome_do_banco';
-$username = 'usuario';
-$password = 'senha';
+$dbname = 'nestsafe';
+$username = 'root';     // Usuário padrão do XAMPP
+$password = '';         // Senha padrão do XAMPP (vazia)
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
