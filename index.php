@@ -20,11 +20,13 @@ include 'buscar-produtos.php';
     <h1>Produtos</h1>
     <h2>Seguros para você.</h2>
 </div>
-<section class="main">
 <!-- DIVIDER -->
-    <div class="page-divider">
-            <img src="<?php echo img_url('frame-divisor.svg'); ?>" alt="" class="divider-arrow">
-    </div>
+<div class="page-divider">
+    <img src="<?php echo img_url('frame-divisor.svg'); ?>" alt="" class="divider-arrow">
+</div>
+
+<!-- MAIN -->
+<section class="main">
 
 <body>
 

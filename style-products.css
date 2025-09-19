@@ -38,20 +38,22 @@ body {
 
 .page-divider {
   display: flex;
+  width: 60px;
   height: 60px;
   align-content: center;  
+  align-content: center;
+  margin: auto;
 }
 
 .divider-arrow {
- 
   background-color: var(--white);
   border-radius: 90%;
-  
 }
 
 .main {
     max-width: 1200px;
     margin: auto;
+    background-color: #F3F3F3;
 }
 
 
