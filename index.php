@@ -43,6 +43,7 @@ include 'buscar-produtos.php';
                 </button>
             </form>
         </div> 
+
 <!-- CONTAINER DE RESULTADOS -->
         <div class="results-info">
             <h2><?php echo $total_produtos; ?> produto(s) encontrado(s)</h2>
@@ -50,12 +51,14 @@ include 'buscar-produtos.php';
                 <div>Página <?php echo $pagina; ?> de <?php echo $total_paginas; ?></div>
             <?php endif; ?>
         </div>
-        
+
+<!-- CONTAINER DE GRID DE PRODUTOS -->
         <?php if (count($produtos) > 0): ?>
             <div class="products-grid">
                 <?php foreach ($produtos as $produto): 
                     $imagens = buscarImagensProduto($produto['codigo']);?>
 
+<!-- CONTAINER DE CARDS DE PRODUTOS -->
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="<?php echo $imagens[0]; ?>" alt="<?php echo htmlspecialchars($produto['nome']); ?>" class="product-image">
@@ -67,6 +70,8 @@ include 'buscar-produtos.php';
                                 </div>
                             <?php endif; ?>
                         </div>
+
+<!-- CONTAINER DE INFORMAÇÕES DENTRO DO CARD -->                        
                         <div class="product-info">
                             <h3 class="product-name"><?php echo htmlspecialchars($produto['nome']); ?></h3>
                             <div class="product-code">Código: <?php echo htmlspecialchars($produto['codigo']); ?></div>
@@ -81,7 +86,8 @@ include 'buscar-produtos.php';
                     </div>
                 <?php endforeach; ?>
             </div>
-            
+
+<!-- CONTAINER DE PAGINAÇÃO -->
             <?php if ($total_paginas > 1): ?>
                 <div class="pagination">
                     <?php if ($pagina > 1): ?>
@@ -109,7 +115,7 @@ include 'buscar-produtos.php';
                     <?php endif; ?>
                 </div>
             <?php endif; ?>
-            
+<!-- CASO NÃO ENCONTRE PRODUTOS -->           
         <?php else: ?>
             <div class="no-products">
                 <i class="fas fa-search"></i>
