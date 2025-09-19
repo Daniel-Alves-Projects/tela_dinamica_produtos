@@ -1,4 +1,9 @@
 <?php
+$page_title = "Início";
+$meta_description = "A Nestsafe é uma distribuidora de produtos médicos com alta qualidade, entrega ágil e suporte especializado. Soluções para revenda e atendimento seguro.";
+include('includes/header.php');
+?>
+<?php
 include 'buscar-produtos.php';
 ?>
 <!DOCTYPE html>
@@ -8,7 +13,7 @@ include 'buscar-produtos.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NESTSAFE - Produtos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style-products.css">
 </head>
 <body>
     <div class="container">
@@ -108,10 +113,9 @@ include 'buscar-produtos.php';
             </div>
         <?php endif; ?>
         
-        <footer>
-            <p>NESTSAFE &copy; <?php echo date('Y'); ?> - Todos os direitos reservados</p>
-        </footer>
+        
     </div>
+    <?php include('includes/footer.php'); ?>
 
     <script src="script.js"></script>
 </body>
