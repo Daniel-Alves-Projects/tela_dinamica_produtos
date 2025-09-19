@@ -4,12 +4,12 @@ $meta_description = "A Nestsafe é uma distribuidora de produtos médicos com al
 include('includes/header.php');
 ?>
 <main>
-<head>
-    <div class="home-produtos">
-        <h1>Produtos</h1>
-        <h2>Seguros para você.</h2>
-    </div>
-</head>
+
+<div class="home-produtos">
+    <h1>Produtos</h1>
+    <h2>Seguros para você.</h2>
+</div>
+
 <!-- DIVIDER -->
     <div class="page-divider">
         <div class="container">

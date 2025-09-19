@@ -16,12 +16,17 @@ include 'buscar-produtos.php';
     <link rel="stylesheet" href="style-products.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">NESTSAFE</div>
-            <p class="tagline">Sua saúde em primeiro lugar</p>
-        </header>
-        
+    <div class="home-produtos">
+    <h1>Produtos</h1>
+    <h2>Seguros para você.</h2>
+</div>
+
+<!-- DIVIDER -->
+    <div class="page-divider">
+        <div class="container">
+            <img src="<?php echo img_url('frame-divisor.svg'); ?>" alt="" class="divider-arrow">
+        </div>
+    </div>
         <div class="search-container">
             <form class="search-form" method="GET" action="">
                 <input 
@@ -47,9 +52,8 @@ include 'buscar-produtos.php';
         <?php if (count($produtos) > 0): ?>
             <div class="products-grid">
                 <?php foreach ($produtos as $produto): 
-                    $imagens = buscarImagensProduto($produto['codigo']);
-                    $data_cadastro = date('d/m/Y', strtotime($produto['data_cadastro']));
-                ?>
+                    $imagens = buscarImagensProduto($produto['codigo']);?>
+
                     <div class="product-card">
                         <div class="product-image-container">
                             <img src="<?php echo $imagens[0]; ?>" alt="<?php echo htmlspecialchars($produto['nome']); ?>" class="product-image">
@@ -69,7 +73,6 @@ include 'buscar-produtos.php';
                                 <p class="product-description"><?php echo htmlspecialchars($produto['descricao']); ?></p>
                             <?php endif; ?>
                             <div class="product-meta">
-                                <div class="product-date">Cadastrado em: <?php echo $data_cadastro; ?></div>
                                 <a href="#" class="view-details">Ver detalhes</a>
                             </div>
                         </div>
