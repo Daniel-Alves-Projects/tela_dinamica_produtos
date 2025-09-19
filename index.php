@@ -15,7 +15,7 @@ include 'buscar-produtos.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style-products.css">
 </head>
-
+<!-- TÍTULO -->
     <div class="title-produtos">
     <h1>Produtos</h1>
     <h2>Seguros para você.</h2>
