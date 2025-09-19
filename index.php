@@ -15,18 +15,20 @@ include 'buscar-produtos.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style-products.css">
 </head>
-<body>
-    <div class="home-produtos">
+
+    <div class="title-produtos">
     <h1>Produtos</h1>
     <h2>Seguros para você.</h2>
 </div>
-
+<section class="main">
 <!-- DIVIDER -->
     <div class="page-divider">
-        <div class="container">
             <img src="<?php echo img_url('frame-divisor.svg'); ?>" alt="" class="divider-arrow">
-        </div>
     </div>
+
+<body>
+
+<!-- CONTAINER DE PESQUISA -->
         <div class="search-container">
             <form class="search-form" method="GET" action="">
                 <input 
@@ -34,14 +36,14 @@ include 'buscar-produtos.php';
                     name="pesquisa" 
                     class="search-input" 
                     placeholder="Pesquisar por nome, código ou categoria..."
-                    value="<?php echo htmlspecialchars($termo_pesquisa); ?>"
-                >
+                    value="<?php echo htmlspecialchars($termo_pesquisa); ?>">
+
                 <button type="submit" class="search-button">
                     <i class="fas fa-search"></i> Pesquisar
                 </button>
             </form>
-        </div>
-        
+        </div> 
+<!-- CONTAINER DE RESULTADOS -->
         <div class="results-info">
             <h2><?php echo $total_produtos; ?> produto(s) encontrado(s)</h2>
             <?php if ($total_paginas > 1): ?>
@@ -115,6 +117,7 @@ include 'buscar-produtos.php';
                 <p>Tente alterar os termos da sua pesquisa ou explore nossa lista de produtos aleatórios.</p>
             </div>
         <?php endif; ?>
+</section>
         
         
     </div>
