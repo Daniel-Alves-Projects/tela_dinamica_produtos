@@ -1,49 +1,39 @@
-# tela_dinamica_produtos
-Passo 4: Explicação do Código
-Conexão com o Banco: O arquivo conexao.php estabelece a conexão com o MySQL usando PDO.
+SISTEMA NESTSAFE - INSTRUÇÕES DE INSTALAÇÃO
 
-Lógica de Pesquisa:
+1. ESTRUTURA DE PASTAS:
+   - Coloque todos os arquivos na pasta do seu servidor (htdocs no XAMPP)
+   - Crie uma pasta chamada "imgs-products" para armazenar as imagens
 
-Verificamos se há um parâmetro de pesquisa na URL
+2. CONFIGURAÇÃO DO BANCO DE DADOS:
+   - Execute o script SQL abaixo no phpMyAdmin para criar a tabela:
 
-Construímos a cláusula WHERE dinamicamente com base na pesquisa
+   CREATE TABLE produtos (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       nome VARCHAR(255) NOT NULL,
+       codigo VARCHAR(50) NOT NULL UNIQUE,
+       categoria VARCHAR(100) NOT NULL,
+       descricao TEXT,
+       data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   );
 
-Usamos prepared statements para evitar SQL injection
+3. CONFIGURAÇÃO DAS IMAGENS:
+   - As imagens devem seguir o padrão: [código]-[número].jpg
+   - Exemplo: ESP001-1.jpg, ESP001-2.jpg, etc.
+   - Coloque as imagens na pasta "imgs-products"
 
-Paginação:
+4. CONFIGURAÇÃO DA CONEXÃO:
+   - Edite o arquivo conexao.php com suas credenciais do MySQL
+   - Usuário padrão do XAMPP: root
+   - Senha padrão do XAMPP: (vazia)
 
-Calculamos o número total de páginas
+5. ACESSO:
+   - Acesse o sistema através de: http://localhost/nestsafe/index.php
 
-Limitamos os resultados a 24 produtos por página
+6. FUNCIONALIDADES:
+   - Exibição aleatória de produtos na primeira visita
+   - Pesquisa por nome, código ou categoria
+   - Paginação (máximo de 24 produtos por página)
+   - Navegação entre múltiplas imagens por produto
+   - Layout responsivo para mobile e desktop
 
-Geramos links de paginação que mantêm os parâmetros de pesquisa
-
-Exibição Aleatória:
-
-Na primeira visita (sem pesquisa), os produtos são ordenados aleatoriamente com ORDER BY RAND()
-
-Quando há uma pesquisa, os resultados são exibidos por relevância
-
-Design Responsivo:
-
-Usamos CSS Grid para criar um layout responsivo
-
-Os cards de produtos se ajustam automaticamente ao tamanho da tela
-
-Passo 5: Considerações de Segurança
-Prepared Statements: Protegem contra SQL Injection
-
-htmlspecialchars(): Previne ataques XSS ao exibir dados do banco
-
-Validação de Entrada: Verificamos e sanitizamos os parâmetros GET
-
-Passo 6: Personalizações Possíveis
-Adicionar filtros avançados por categoria, preço, etc.
-
-Implementar ordenação (mais recentes, preço, etc.)
-
-Adicionar sistema de favoritos ou comparação de produtos
-
-Melhorar a interface com mais informações nos cards
-
-Este código fornece uma base sólida para o sistema de produtos que você deseja implementar. Lembre-se de adaptar as credenciais do banco de dados e testar thoroughly antes de colocar em produção.
+Para suporte, entre em contato com o administrador do sistema.
