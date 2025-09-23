@@ -122,7 +122,7 @@ include 'buscar-produtos.php';
             <div class="no-products">
                 <i class="fas fa-search"></i>
                 <h3>Nenhum produto encontrado</h3>
-                <p>Tente alterar os termos da sua pesquisa ou explore nossa lista de produtos aleatórios.</p>
+                <p>Tente alterar os termos da sua pesquisa ou explore nossa lista de produtos.</p>
             </div>
         <?php endif; ?>
 </section>
