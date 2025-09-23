@@ -64,7 +64,7 @@ function buscarImagensProduto($codigo) {
     
     // Verifica se existem imagens para este código
     for ($i = 1; $i <= 4; $i++) {
-        $arquivo = $pasta . $codigo . '-' . $i . '.jpg';
+        $arquivo = $pasta . $codigo . '-' . $i . '.png';
         if (file_exists($arquivo)) {
             $imagens[] = $arquivo;
         }
@@ -72,7 +72,7 @@ function buscarImagensProduto($codigo) {
     
     // Se não encontrou imagens, usa uma imagem padrão
     if (empty($imagens)) {
-        $imagens[] = $pasta . 'default.jpg';
+        $imagens[] = $pasta . 'default.png';
     }
     
     return $imagens;
