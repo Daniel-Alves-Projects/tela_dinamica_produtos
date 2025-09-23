@@ -215,17 +215,6 @@ body {
     margin-left: 5px; /* Adiciona um espaço para mover o link um pouco */   
 }
 
-.view-details {
-  color: #04B4AE;
-  font-weight: 600;
-  font-size: 14px;
-  transition: color 0.2s;
-}
-
-.view-details:hover {
-    color: #2c3e50;
-}
-
 .pagination {
     display: flex;
     justify-content: center;
