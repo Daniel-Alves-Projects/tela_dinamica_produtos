@@ -77,10 +77,6 @@ include 'buscar-produtos.php';
                         <div class="product-info">
                             <h3 class="product-name"><?php echo htmlspecialchars($produto['nome']); ?></h3>
                             <div class="product-code">Código: <?php echo htmlspecialchars($produto['codigo']); ?></div>
-                            <span class="product-category"><?php echo htmlspecialchars($produto['categoria']); ?></span>
-                            <?php if (!empty($produto['descricao'])): ?>
-                                <p class="product-description"><?php echo htmlspecialchars($produto['descricao']); ?></p>
-                            <?php endif; ?>
                             <div class="product-meta">
                                 <a href="#" class="view-details">Ver detalhes</a>
                             </div>
