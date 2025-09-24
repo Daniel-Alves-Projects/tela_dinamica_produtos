@@ -25,10 +25,10 @@ include 'buscar-produtos.php';
     <img src="<?php echo img_url('frame-divisor.svg'); ?>" alt="" class="divider-arrow">
 </div>
 
+<body>
+
 <!-- MAIN -->
 <section class="main">
-
-<body>
 
 <!-- CONTAINER DE PESQUISA -->
         <div class="search-container">
