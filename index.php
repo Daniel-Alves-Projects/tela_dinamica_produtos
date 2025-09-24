@@ -41,7 +41,7 @@ include 'buscar-produtos.php';
                     value="<?php echo htmlspecialchars($termo_pesquisa); ?>">
 
                 <button type="submit" class="search-button">
-                    <i class="fas fa-search"></i> Pesquisar
+                    <i class="fas fa-search"></i>
                 </button>
             </form>
         </div> 
@@ -76,7 +76,6 @@ include 'buscar-produtos.php';
 <!-- CONTAINER DE INFORMAÇÕES DENTRO DO CARD -->                        
                         <div class="product-info">
                             <h3 class="product-name"><?php echo htmlspecialchars($produto['nome']); ?></h3>
-                            <div class="product-code">Código: <?php echo htmlspecialchars($produto['codigo']); ?></div>
                         </div>
                     </div>
                 <?php endforeach; ?>
