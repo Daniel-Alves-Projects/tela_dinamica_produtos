@@ -80,7 +80,7 @@ body {
     background-color: #D9D9D9; /* A cor que estava no input vira o fundo da barra */
     border-radius: 50px;       /* Borda bem redonda para o formato de pílula */
     padding: 10px 20px;        /* Espaçamento interno */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave opcional */
+    
 }
 
 .search-input {
@@ -140,7 +140,6 @@ body {
 .product-card {
     background-color: white;
     border-radius: 35px; /*Define o quão curvo será a borda do elemento*/
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s, box-shadow 0.3s; /*faz o efeito de transição quando passa o mouse em cima*/
     display: flex; /*Deixa os itens de dentro da caixa "soltos", podendo assim alinhad com o lign items ou justify-content*/
     flex-direction: column; /*usada em conjunto com display: flex; para empilhar os itens um abaixo do outro*/
